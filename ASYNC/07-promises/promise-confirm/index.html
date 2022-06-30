@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function newQuestion(questionStr) {
+        const questionPromise = new Promise((resolve, reject) => {
+          const response = confirm(questionStr);
+          response ? resolve() : reject();
+        });
+        return questionPromise;
+      }
+
+      newQuestion("Heute ist nicht Heiligabend")
+        .then(() => alert("Richtig! lange bis Heiligabend!"))
+        .catch(() => alert("Falsch!"))
+        .then(() => newQuestion("Heute ist nicht Ostern"))
+        .then(() => alert("Richtig! Lange bis Ostern!"))
+        .catch(() => alert("Falsch! Ostern!"));
+    </script>
+  </body>
+</html>

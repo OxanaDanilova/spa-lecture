@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+}
+li {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  background-color: darksalmon;
+  border: 1px orange solid;
+}
+
+li .title {
+  display: block;
+}

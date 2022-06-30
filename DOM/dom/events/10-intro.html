@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 onclick="alert('onclick event')">Events</h1>
+    <h2>Mouse-Events</h2>
+    <button type="submit" onmouseover="alert('mouseover')">Mouse Over</button>
+    <button type="submit" onmouseout="alert('mouseout')">Mouse Out</button>
+
+    <h2>Keyboard-Events</h2>
+    <form action="" onreset="alert('onreset')" onsubmit="alert('onsubmit')">
+      <label
+        >KeyPressed
+        <input
+          type="text"
+          name=""
+          id=""
+          onkeypress="alert('onkeypress not for (ALT, CTRL, SHIFT, ESC)')"
+        />
+      </label>
+      <label
+        >Keydown
+        <input
+          type="text"
+          name=""
+          id=""
+          onkeydown="alert('onkeydown for all keys')"
+        />
+      </label>
+
+      <br />
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

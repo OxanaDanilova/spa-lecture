@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wieso ist das praktisch?</title>
+    <style>
+      div {
+        padding: 1em;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Wieso ist das praktisch?</h1>
+
+    <p>
+      Je nach Aufgabe kann ein EventHandler genügen. Auf das Target hat man bei
+      Bedarf immer noch Zugriff. Der Code kann dadurch übersichtlicher und
+      performanter werden.
+    </p>
+
+    <div id="div1">
+      1
+      <div id="div2">2</div>
+      <div id="div3">3</div>
+      <div id="div4">4</div>
+    </div>
+
+    <script>
+      const div1 = document.getElementById("div1");
+      div1.addEventListener("click", handle1);
+
+      function handle1() {
+        console.log("handle 1");
+        const target = event.target;
+        console.log("id:", target.id);
+        console.log("currentTarget", event.currentTarget.id);
+      }
+    </script>
+  </body>
+</html>
